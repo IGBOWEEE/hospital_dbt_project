@@ -4,7 +4,7 @@
 
 WITH date_series AS (
     SELECT DATEADD(day, seq4(), '2018-01-01'):: DATE AS full_date
-    FROM TABLE(GENERATOR(rowcount => (365 * 8))) -- 8 years of data
+    FROM TABLE(GENERATOR(rowcount => (365 * 10))) -- 10 years of data
 )
 
 SELECT

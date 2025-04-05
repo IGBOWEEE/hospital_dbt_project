@@ -93,7 +93,7 @@ LEFT JOIN monthly_overall_finance fin
     AND COALESCE(adm.branch_name, er.branch_name, occ.branch_name) = fin.branch_name -- Join also on branch
 WHERE
     d.day_of_month = 1 -- Only select the first day of each month from dim_date
-    AND d.full_date >= '2018-01-01' AND d.full_date <= '2025-12-31' -- Filter date range relevant to data
+    AND d.full_date >= '2018-01-01' AND d.full_date <= '2027-12-31' -- Filter date range relevant to data
     -- Ensure at least one metric exists for the row to avoid empty month rows if dim_date is much larger
     AND COALESCE(adm.branch_name, er.branch_name, occ.branch_name, fin.branch_name) IS NOT NULL
 ORDER BY
